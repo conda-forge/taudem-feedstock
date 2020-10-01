@@ -11,25 +11,28 @@ source:
 
 build:
   number: 1
-  skip: true  # [win or osx]
+  skip: true  # [osx]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
-    - make
-    - cmake
+    - make # [linux]
+    - cmake # [linux]
   host:
     - libgdal
-    - mpich
+    - mpich # [linux]
+    - msmpi # [win]
   run:
     - libgdal
-    - mpich
+    - mpich # [linux]
+    - msmpi # [win]
 
 test:
   commands:
-    - test -f $PREFIX/bin/d8flowdir
+    - test -f $PREFIX/bin/d8flowdir # [linux]
+    - if not exist %LIBRARY_BIN%\\d8flowdir.exe exit 1  # [win]
 
 about:
   home: http://hydrology.usu.edu/taudem
