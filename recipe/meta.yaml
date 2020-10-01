@@ -10,7 +10,7 @@ source:
   sha256: 30aee134f5eed2fb65825dd4e9e5181ed4ea6ae22c37d56ae5cfe2bdb9dab385
 
 build:
-  number: 1
+  number: 2
   skip: true  # [osx]
 
 requirements:
@@ -18,20 +18,20 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
-    - make # [linux]
-    - cmake # [linux]
+    - make  # [linux]
+    - cmake  # [linux]
   host:
     - libgdal
-    - mpich # [linux]
-    - msmpi # [win]
+    - mpich  # [linux]
+    - msmpi  # [win]
   run:
     - libgdal
-    - mpich # [linux]
-    - msmpi # [win]
+    - mpich  # [linux]
+    - msmpi  # [win]
 
 test:
   commands:
-    - test -f $PREFIX/bin/d8flowdir # [linux]
+    - test -f $PREFIX/bin/d8flowdir  # [linux]
     - if not exist %LIBRARY_BIN%\\d8flowdir.exe exit 1  # [win]
 
 about:
