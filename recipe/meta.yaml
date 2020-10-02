@@ -32,7 +32,8 @@ requirements:
 test:
   commands:
     - test -f $PREFIX/bin/d8flowdir  # [linux]
-    - if not exist %LIBRARY_BIN%\\d8flowdir.exe exit 1  # [win]
+    - if not exist %LIBRARY_BIN%\\D8FlowDir.exe exit 1  # [win]
+    - if not exist %LIBRARY_LIB%\\D8FlowDir.lib exit 1  # [win]
 
 about:
   home: http://hydrology.usu.edu/taudem
