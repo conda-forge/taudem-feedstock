@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/dtarb/TauDEM/archive/v{{ version }}.tar.gz
-  sha256: 30aee134f5eed2fb65825dd4e9e5181ed4ea6ae22c37d56ae5cfe2bdb9dab385
+  sha256: b230a26d18f9709f8eaf5d906f6a0ef3e5b6f28903afd0ea8e99fab13a626857
 
 build:
   number: 3
