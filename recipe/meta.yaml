@@ -10,8 +10,8 @@ source:
   sha256: b230a26d18f9709f8eaf5d906f6a0ef3e5b6f28903afd0ea8e99fab13a626857
 
 build:
-  number: 3
-  skip: true  # [osx]
+  number: 4
+  skip: true  # [not linux]
 
 requirements:
   build:
