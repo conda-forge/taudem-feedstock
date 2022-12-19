@@ -11,7 +11,7 @@ source:
 
 build:
   number: 4
-  skip: true  # [osx]
+  skip: true  # [not linux]
 
 requirements:
   build:
