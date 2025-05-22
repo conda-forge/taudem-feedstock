@@ -10,13 +10,14 @@ source:
   sha256: b230a26d18f9709f8eaf5d906f6a0ef3e5b6f28903afd0ea8e99fab13a626857
 
 build:
-  number: 4
+  number: 5
   skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('fortran') }}
     - make  # [linux]
     - cmake  # [linux]
