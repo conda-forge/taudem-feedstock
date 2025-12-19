@@ -1,5 +1,5 @@
 {% set name = "TauDEM" %}
-{% set version = "5.3.8" %}
+{% set version = "5.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,16 +7,17 @@ package:
 
 source:
   url: https://github.com/dtarb/TauDEM/archive/v{{ version }}.tar.gz
-  sha256: b230a26d18f9709f8eaf5d906f6a0ef3e5b6f28903afd0ea8e99fab13a626857
+  sha256: 974dd3c74f048acf130c0a941d51e4a96fcff0e9ec238e8cf7bfbd772269661b
 
 build:
-  number: 4
+  number: 0
   skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('fortran') }}
     - make  # [linux]
     - cmake  # [linux]
